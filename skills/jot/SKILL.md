@@ -13,14 +13,18 @@ Decide what the line is:
   line with task markers: `@person`, `!priority`, `due <day>`, `>PAV-12`. Call
   `manyhands_context`, then make one `manyhands_apply` call with a single create op. Leave
   the markers out of the title and set the fields they name instead.
-- **A note**: a fact or thought to keep. Call `manyhands_note`.
-  - If it continues a subject the person already has a note for, use `mode: "append"` with
-    that note's name.
+- **A note**: a fact or thought to keep. Call `manyhands_notes` to see the person's notes,
+  then call `manyhands_note`.
+  - If the line continues the subject of a note in that list, use `mode: "append"` with
+    that note's name, exactly as listed (never its category).
   - Otherwise use `mode: "create"` with a 1 to 3 word name, lowercase words joined by
     hyphens, such as `raise-ideas`.
-  - If append answers that no note has that name, ask the person whether to create it.
 
 The text you save is the jot itself: fix typos, strip a leading `#tag` or `/tag`, keep
 the meaning, and add nothing that was not there.
 
 Tell the person in one line where the jot went.
+
+The server also publishes the full routing rules as the MCP prompt `jot`. In Claude Code,
+the person can run it as `/mcp__manyhands__jot`. When the person uses that prompt, follow
+its text.

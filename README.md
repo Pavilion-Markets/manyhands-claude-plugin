@@ -21,11 +21,14 @@ refused.
 
 - The `manyhands` MCP server (`https://hub.pavilion.markets/mcp`): list, read and search
   tasks, documents, decisions and projects; apply task and project changes; undo them;
-  comment; add to your private notes.
+  comment; list and add to your private notes; run the onboarding interview.
 - Skills that tell Claude when and how to use those tools:
   - `manyhands`: the tools and the rules for using them.
   - `notes-to-tasks`: turn rough notes into task changes.
   - `jot`: send one line to the right note, or make it a task.
+  - `interview`: load your company's work into your HQ, one office at a time.
+- Three MCP prompts, which carry the in-app rules word for word:
+  `/mcp__manyhands__notes-to-tasks`, `/mcp__manyhands__jot` and `/mcp__manyhands__interview`.
 
 ## Claude.ai and Claude Desktop
 

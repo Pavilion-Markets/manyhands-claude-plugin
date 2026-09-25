@@ -34,7 +34,10 @@ anybody else, so never write in the first person as another member.
 - `manyhands_undo`: undo the person's newest apply, or the one whose turn id you pass.
   Offer it when the person says a change was wrong.
 - `manyhands_comment`: comment on a task, project, decision, meeting or CRM row.
-- `manyhands_note`: add to one of the person's private notes. See the `jot` skill.
+- `manyhands_notes` and `manyhands_note`: list the person's private notes, and add to one.
+  See the `jot` skill.
+- `manyhands_interview_state` and `manyhands_interview_save`: the onboarding interview.
+  See the `interview` skill.
 
 ## Rules
 
