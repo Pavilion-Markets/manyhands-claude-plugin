@@ -1,0 +1,81 @@
+# review e31d86b78294
+
+repo: plugin
+range: refs/remotes/origin/main...task/interview-skill
+head: e31d86b782940d60b85874954bb82085f88ba06d
+slug: interview-skill
+diff_bytes: 6108
+files: 5
+dirty: no
+inflight: (none)
+gate: gate-605ddf1aeb53db1072a8547a503a07f4192531f5
+class: src
+tier: standard
+tier_reason: class:src lines:64
+diff_lines: 64
+warm: no
+warm_from: -
+warm_delta_bytes: 0
+cold_reason: PAVILION_REVIEW_COLD=1
+claude_model: not asked
+claude_verdict: not asked
+claude_blockers: 0
+claude_notes: 0
+gemini_model: gemini-3.6-flash
+gemini_verdict: pass
+gemini_blockers: 0
+gemini_notes: 0
+gemini_thinking: budget:16384
+gemini_toolcalls: 40
+gemini_toolcalls_used: 19
+claude_cost_usd: 0
+claude_prompt_tokens: 0
+claude_output_tokens: 0
+claude_cache_read_tokens: 0
+claude_cache_write_tokens: 0
+claude_attempts: 0
+claude_stop: none
+claude_provider: none
+claude_toolcalls: -
+claude_toolcalls_used: -
+partial: no
+gemini_prompt_tokens: 15727
+gemini_output_tokens: 198
+gemini_thinking_tokens: 1653
+gemini_cost_usd: 0.018736
+blockers: 0
+notes: 0
+verdict: pass
+
+---
+
+## reading: sha=e31d86b78294 slug=interview-skill verdict=pass dirty=no class=src warm=no warm_from=- warm_delta_bytes=0 diff_bytes=6108 blockers=0 notes=0 claude_cost_usd=0 claude_prompt_tokens=0 claude_output_tokens=0 claude_cache_read_tokens=0 claude_cache_write_tokens=0 claude_attempts=0 claude_stop=none round=1 round_cap=2 claude_toolcalls=- claude_toolcalls_used=- tier=standard partial=no diff_lines=64 gemini_prompt_tokens=15727 gemini_output_tokens=198 gemini_cost_usd=0.018736
+
+## gemini, gemini-3.6-flash
+
+I reviewed the diff adding the `interview` skill, updating the `jot` skill to list notes via `manyhands_notes` before appending, bumping the plugin version to `0.2.0`, and updating documentation across `.claude-plugin/plugin.json`, `README.md`, `skills/interview/SKILL.md`, `skills/jot/SKILL.md`, and `skills/manyhands/SKILL.md`. I checked the structure and rules against `test/plugin.test.js`, verified frontmatter requirements, and ran `grep_repo` for tool names (`manyhands_notes`, `manyhands_interview_state`, `manyhands_interview_save`) and prompt names (`/mcp__manyhands__interview`, `/mcp__manyhands__jot`). No ADRs exist in `docs/adrs/`. No defects or non-conformance with repo standards were found.
+
+VERDICT: pass
+
+### what it read
+
+  tool 1/40 glob_files({"pattern": "docs/adrs/*"})
+  tool 2/40 glob_files({"pattern": "*adr*"})
+  tool 3/40 glob_files({"pattern": "*"})
+  tool 4/40 read_file({"path": ".claude-plugin/plugin.json"})
+  tool 5/40 read_file({"path": ".claude-plugin/marketplace.json"})
+  tool 6/40 read_file({"path": "package.json"})
+  tool 7/40 read_file({"path": "test/plugin.test.js"})
+  tool 8/40 read_file({"path": "skills/jot/SKILL.md"})
+  tool 9/40 read_file({"path": "skills/manyhands/SKILL.md"})
+  tool 10/40 read_file({"path": "skills/notes-to-tasks/SKILL.md"})
+  tool 11/40 read_file({"path": "skills/interview/SKILL.md"})
+  tool 12/40 read_file({"path": "README.md"})
+  tool 13/40 grep_repo({"pattern": "jot"})
+  tool 14/40 grep_repo({"pattern": "interview"})
+  tool 15/40 grep_repo({"pattern": "manyhands_note"})
+  tool 16/40 grep_repo({"pattern": "mcp__manyhands__"})
+  tool 17/40 read_file({"path": ".mcp.json"})
+  tool 18/40 read_file({"path": "LICENSE"})
+  tool 19/40 read_file({"path": ".gitignore"})
+  done. 19 tool call(s), prompt=15727 thoughts=1653 output=198 tokens
