@@ -1,0 +1,8 @@
+{
+  "name": "manyhands-claude-plugin",
+  "private": true,
+  "description": "The Manyhands plugin for Claude Code. No dependencies: the test runs on the Node standard library.",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}

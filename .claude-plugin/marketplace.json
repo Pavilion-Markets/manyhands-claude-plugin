@@ -1,0 +1,12 @@
+{
+  "name": "manyhands",
+  "owner": { "name": "Pavilion Markets", "url": "https://hub.pavilion.markets" },
+  "metadata": { "description": "The Manyhands plugin for Claude Code." },
+  "plugins": [
+    {
+      "name": "manyhands",
+      "source": "./",
+      "description": "Manyhands in Claude Code: read and change your HQ's tasks, projects, notes and comments as yourself."
+    }
+  ]
+}
